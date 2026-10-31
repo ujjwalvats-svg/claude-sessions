@@ -140,6 +140,10 @@ def test_open_running_session_asks_before_taking_it_over(
 ) -> None:
     register_running(env, fake_claude, SESSION_A)
     calls: list[list[str]] = []
+    real_which = shutil.which
+    monkeypatch.setattr(
+        "shutil.which", lambda name: "/bin/claude" if name == "claude" else real_which(name)
+    )
     monkeypatch.setattr("os.execv", lambda _exe, argv: calls.append(argv))
 
     monkeypatch.setattr("builtins.input", lambda _prompt: "n")
