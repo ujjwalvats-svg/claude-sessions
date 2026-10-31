@@ -1,0 +1,11 @@
+# Installs the `cs` command from this folder:
+#
+#     pip install -r requirements.txt
+#
+# cs has no third-party Python dependencies. The package metadata, and the dev tools for
+# contributors, live in pyproject.toml.
+#
+# Also needed, outside Python:
+#   - fzf 0.73.0 or newer      brew install fzf
+#   - Claude Code CLI          https://claude.com/claude-code
+.
