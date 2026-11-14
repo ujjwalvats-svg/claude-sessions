@@ -28,7 +28,7 @@ Changelog = "https://github.com/ujjwalvats-svg/claude-sessions/blob/main/CHANGEL
 cs = "claude_sessions.cli:main"
 
 [build-system]
-requires = ["uv_build>=0.11.28,<0.12.0"]
+requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
 
 [tool.ruff]
@@ -55,6 +55,6 @@ pythonpath = ["."]
 [dependency-groups]
 dev = [
     "pytest==9.2.0",
-    "ruff==0.17.3",
-    "ty==0.0.95",
+    "ruff==0.17.4",
+    "ty==0.0.99",
 ]
